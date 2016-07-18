@@ -3,7 +3,7 @@ require 'rake'
 desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
-  ignored_files = %w[Rakefile oh-my-zsh]
+  ignored_files = %w[Rakefile oh-my-zsh README.md]
 
   Dir['*'].each do |file|
     next if ignored_files.include? file
