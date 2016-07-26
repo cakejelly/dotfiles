@@ -24,13 +24,13 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
-     ruby
      javascript
      emacs-lisp
      git
      markdown
      org
      syntax-checking
+     (ruby :variables ruby-enable-enh-ruby-mode t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -236,6 +236,8 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  ;; Prevents utf-8 comment being added to the top of ruby files on save.
+  (setq enh-ruby-add-encoding-comment-on-save nil)
   )
 
 (defun dotspacemacs/user-config ()
