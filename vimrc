@@ -5,7 +5,6 @@ syntax on
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
-colorscheme solarized
 
 set nocompatible " We're running Vim, not Vi!
 filetype on " Enable filetype detection
@@ -26,9 +25,3 @@ set colorcolumn=+1
 
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
-
-call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-endwise'
-call plug#end()
